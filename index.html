@@ -9,7 +9,7 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <style>
-         * {
+        * {
             transition: 100ms;
         }
 
@@ -27,6 +27,17 @@
 
         .text-pink {
             color: #FF69B4;
+        }
+
+        #container-row .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        }
+
+        #container-row .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.4);
+            z-index: 1;
         }
     </style>
 
@@ -48,6 +59,12 @@
         </div>
     </section>
 
+    <div class="row my-4 mx-5">
+        <div class="col-12">
+            <input type="text" id="searchBar" class="form-control rounded-pill"
+                placeholder="Search cafe staff by name or nickname...">
+        </div>
+    </div>
 
     <div class="container">
         <div class="row">
@@ -87,6 +104,26 @@
     </script>
 
 
+    <script>
+        const searchBar = document.getElementById('searchBar');
+
+        searchBar.addEventListener('input', function () {
+            const searchTerm = searchBar.value.toLowerCase();
+            const cards = containerRow.getElementsByClassName('col-6');
+
+            Array.from(cards).forEach(card => {
+                const name = card.querySelector('.card-title').textContent.toLowerCase();
+                const nickname = card.querySelector('.card-text').textContent.toLowerCase();
+
+                if (name.includes(searchTerm) || nickname.includes(searchTerm)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    
     <footer class="text-center py-3 text-pink">
         <p class="mb-0">&copy; 2025 Justine Weslley. All content is for educational purposes.</p>
         <small>Images sourced online</small>

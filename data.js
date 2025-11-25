@@ -381,132 +381,403 @@ var sanrio = [
         picture: "images/gudetama.png"
     },
     {
-    name: "Shakipiyo",
-    nickname: "Piyo",
-    birthday: "Unknown",
-    debut: "Unknown",
-    gender: "Male",
-    species: "Chicken",
-    picture: "images/shakipiyo.png"
-},  
-{
-    name: "Hardboiled",
-    nickname: "Hard-Boiled",
-    birthday: "Every day",
-    debut: "2013",
-    gender: "Male",
-    species: "Food",
-    breed: "Boiled slice of egg",
-    picture: "images/hard-boiled.png"
-},
-{
-    name: "PiHai",
-    nickname: "Pihai",
-    birthday: "May 5",
-    debut: "2022",
-    gender: "Male",
-    species: "Fox",
-    picture: "images/pihai.png"
-},
-{
-    name: "Rain",
-    nickname: "Rein",
-    birthday: "March 2",
-    debut: "2022",
-    gender: "Male",
-    species: "Fox",
-    picture: "images/rain.png"
-},
-{
-    name: "Miken",
-    nickname: "Micoon",
-    birthday: "January 20",
-    debut: "2022",
-    gender: "Male",
-    species: "Object",
-    picture: "images/miken.png"
-},
-{
-    name: "Chimata",
-    nickname: "N/A",
-    birthday: "April 5",
-    debut: "2022",
-    gender: "Male",
-    species: "Rabbit",
-    picture: "images/chimata.png"
-},
-{
-    name: "Yanukami",
-    nickname: "N/A",
-    birthday: "October 25",
-    debut: "2022",
-    gender: "Male",
-    species: "Shisa",
-    picture: "images/yanukami.png"
-},
-{
-    name: "Mamechii",
-    nickname: "N/A",
-    birthday: "May 30",
-    debut: "2022",
-    gender: "Male",
-    species: "Dog",
-    picture: "images/mamechi.png"
-},
-{
-    name: "Popo",
-    nickname: "POP-POH",
-    birthday: "June 23",
-    debut: "2022",
-    gender: "Male",
-    species: "Bird",
-    picture: "images/popo.png"
-},
-{
-    name: "Chulala",
-    nickname: "N/A",
-    birthday: "December 11",
-    debut: "2022",
-    gender: "Male",
-    species: "Dog",
-    picture: "images/chulala.png"
-},
-{
-    name: "Moco",
-    nickname: "N/A",
-    birthday: "October 4",
-    debut: "2022",
-    gender: "Male",
-    species: "Angel",
-    picture: "images/moco.png"
-},
-{
-    name: "Ruru",
-    nickname: "N/A",
-    birthday: "November 19",
-    debut: "2022",
-    gender: "Male",
-    species: "Dog",
-    picture: "images/ruru.png"
-},
-{
-    name: "Bira",
-    nickname: "N/A",
-    birthday: "July 29",
-    debut: "2022",
-    gender: "Male",
-    species: "Plant",
-    picture: "images/bira.png"
-},
-{
-    name: "Landlord",
-    nickname: "Ōkasan",
-    birthday: "N/A",
-    debut: "2022",
-    gender: "Male",
-    species: "Human-like",
-    picture: "images/landlord.png"
-}
+        name: "Shakipiyo",
+        nickname: "Piyo",
+        birthday: "Unknown",
+        debut: "Unknown",
+        gender: "Male",
+        species: "Chicken",
+        picture: "images/shakipiyo.png"
+    },
+    {
+        name: "Hardboiled",
+        nickname: "Hard-Boiled",
+        birthday: "Every day",
+        debut: "2013",
+        gender: "Male",
+        species: "Food",
+        breed: "Boiled slice of egg",
+        picture: "images/hard-boiled.png"
+    },
+    {
+        name: "PiHai",
+        nickname: "Pihai",
+        birthday: "May 5",
+        debut: "2022",
+        gender: "Male",
+        species: "Fox",
+        picture: "images/pihai.png"
+    },
+    {
+        name: "Rain",
+        nickname: "Rein",
+        birthday: "March 2",
+        debut: "2022",
+        gender: "Male",
+        species: "Fox",
+        picture: "images/rain.png"
+    },
+    {
+        name: "Miken",
+        nickname: "Micoon",
+        birthday: "January 20",
+        debut: "2022",
+        gender: "Male",
+        species: "Object",
+        picture: "images/miken.png"
+    },
+    {
+        name: "Chimata",
+        nickname: "N/A",
+        birthday: "April 5",
+        debut: "2022",
+        gender: "Male",
+        species: "Rabbit",
+        picture: "images/chimata.png"
+    },
+    {
+        name: "Yanukami",
+        nickname: "N/A",
+        birthday: "October 25",
+        debut: "2022",
+        gender: "Male",
+        species: "Shisa",
+        picture: "images/yanukami.png"
+    },
+    {
+        name: "Mamechii",
+        nickname: "N/A",
+        birthday: "May 30",
+        debut: "2022",
+        gender: "Male",
+        species: "Dog",
+        picture: "images/mamechi.png"
+    },
+    {
+        name: "Popo",
+        nickname: "POP-POH",
+        birthday: "June 23",
+        debut: "2022",
+        gender: "Male",
+        species: "Bird",
+        picture: "images/popo.png"
+    },
+    {
+        name: "Chulala",
+        nickname: "N/A",
+        birthday: "December 11",
+        debut: "2022",
+        gender: "Male",
+        species: "Dog",
+        picture: "images/chulala.png"
+    },
+    {
+        name: "Moco",
+        nickname: "N/A",
+        birthday: "October 4",
+        debut: "2022",
+        gender: "Male",
+        species: "Angel",
+        picture: "images/moco.png"
+    },
+    {
+        name: "Ruru",
+        nickname: "N/A",
+        birthday: "November 19",
+        debut: "2022",
+        gender: "Male",
+        species: "Dog",
+        picture: "images/ruru.png"
+    },
+    {
+        name: "Bira",
+        nickname: "N/A",
+        birthday: "July 29",
+        debut: "2022",
+        gender: "Male",
+        species: "Plant",
+        picture: "images/bira.png"
+    },
+    {
+        name: "Landlord",
+        nickname: "Ōkasan",
+        birthday: "N/A",
+        debut: "2022",
+        gender: "Male",
+        species: "Human-like",
+        picture: "images/landlord.png"
+    },
+    {
+        name: "Wish Me Mell",
+        nickname: "Mell",
+        birthday: "September 20",
+        debut: "2010",
+        gender: "Female",
+        species: "Rabbit",
+        picture: "images/wish-me-mell.png"
+    },
+    {
+        name: "Maimai",
+        nickname: "Maimai",
+        birthday: "October 28",
+        debut: "2011",
+        gender: "Female",
+        species: "Dog",
+        picture: "images/maimai.png"
+    },
+    {
+        name: "Ahiru no Pekkle",
+        nickname: "Pekkle",
+        birthday: "July 27",
+        debut: "1989",
+        gender: "Male",
+        species: "Duck",
+        picture: "images/pekkle.png"
+    },
+    {
+        name: "Pitch",
+        nickname: "Pitchi",
+        birthday: "March 17",
+        debut: "1990",
+        gender: "Male",
+        species: "Fish",
+        picture: "images/pitch.png"
+    },
+    {
+        name: "Run",
+        nickname: "Ran",
+        birthday: "March 17",
+        debut: "1990",
+        gender: "Female",
+        species: "Fish",
+        picture: "images/ran.png"
+    },
+    {
+        name: "Chap",
+        nickname: "N/A",
+        birthday: "March 17",
+        debut: "1990",
+        gender: "Male",
+        species: "Fish",
+        picture: "images/chap.png"
+    },
+    {
+        name: "Kirimichan",
+        nickname: "N/A",
+        birthday: "August 31",
+        debut: "2013",
+        gender: "KIRIMI",
+        species: "Food",
+        picture: "images/kirimichan.png"
+    },
+    {
+        name: "Kamaboko-chan",
+        nickname: "N/A",
+        birthday: "N/A",
+        debut: "2013",
+        gender: "Female",
+        species: "Food",
+        picture: "images/kamaboko.png"
+    },
+    {
+        name: "Takuwanwan",
+        nickname: "N/A",
+        birthday: "N/A",
+        debut: "2019",
+        gender: "Female",
+        species: "Food / Dog",
+        picture: "images/takuwanwan.png"
+    },
+    {
+        name: "Ichigo-chan",
+        nickname: "N/A",
+        birthday: "N/A",
+        debut: "2013-2019",
+        gender: "Female",
+        species: "Food",
+        picture: "images/ichigo.png"
+    },
+    {
+        name: "Maguro-kun",
+        nickname: "Tuna-kun",
+        birthday: "N/A",
+        debut: "2015",
+        gender: "Male",
+        species: "Food",
+        picture: "images/maguro.png"
+    },
+    {
+        name: "Moppu",
+        nickname: "N/A",
+        birthday: "February 10",
+        debut: "2017",
+        gender: "Male",
+        species: "Bear",
+        picture: "images/moppu.png"
+    },
+    {
+        name: "Gyoniku",
+        nickname: "N/A",
+        birthday: "N/A",
+        debut: "2017",
+        gender: "Male",
+        species: "Fish",
+        picture: "images/gyoniku.png"
+    },
+    {
+        name: "Kanikama",
+        nickname: "Kanikama-san",
+        birthday: "N/A",
+        debut: "2017",
+        gender: "Male",
+        species: "Crab",
+        picture: "images/kanikama.png"
+    },
+    {
+        name: "Ruby",
+        nickname: "N/A",
+        birthday: "July 29",
+        debut: "2008",
+        gender: "Female",
+        species: "Rabbit",
+        picture: "images/ruby.png"
+    },
+    {
+        name: "Garnet",
+        nickname: "N/A",
+        birthday: "January 8",
+        debut: "2008",
+        gender: "Female",
+        species: "Cat",
+        picture: "images/garnet.png"
+    },
+    {
+        name: "Safi",
+        nickname: "N/A",
+        birthday: "September 1",
+        debut: "2008",
+        gender: "Female",
+        species: "Dog",
+        picture: "images/safi.png"
+    },
+    {
+        name: "Labra",
+        nickname: "Labradorite",
+        birthday: "December 27",
+        debut: "2008",
+        gender: "Female",
+        species: "Polar Bear",
+        picture: "images/labra.png"
+    },
+    {
+        name: "Call",
+        nickname: "Coal",
+        birthday: "September 6",
+        debut: "2012",
+        gender: "Male",
+        species: "Capybara",
+        picture: "images/call.png"
+    },
+    {
+        name: "Granite",
+        nickname: "N/A",
+        birthday: "December 1",
+        debut: "2012",
+        gender: "Male",
+        species: "White lion",
+        picture: "images/granite.png"
+    },
+    {
+        name: "Rua",
+        nickname: "N/A",
+        birthday: "August 28",
+        debut: "2014",
+        gender: "Female",
+        species: "Dutch rabbit",
+        picture: "images/rua.png"
+    },
+    {
+        name: "Jasper",
+        nickname: "N/A",
+        birthday: "February 14",
+        debut: "2010",
+        gender: "Male",
+        species: "Cheetah",
+        picture: "images/jasper.png"
+    },
+    {
+        name: "Shirousa",
+        nickname: "Sugarbunnies",
+        birthday: "May 26",
+        debut: "2004",
+        gender: "Male",
+        species: "Rabbit",
+        picture: "images/shirousa.png"
+    },
+    {
+        name: "Kurousa",
+        nickname: "Sugarbunnies",
+        birthday: "May 26",
+        debut: "2004",
+        gender: "Male",
+        species: "Rabbit",
+        picture: "images/kurousa.png"
+    },
+    {
+        name: "Momousa",
+        nickname: "Momo",
+        birthday: "March 3",
+        debut: "2004",
+        gender: "Female",
+        species: "Rabbit",
+        picture: "images/momousa.png"
+    },
+    {
+        name: "Hanausa",
+        nickname: "Hana",
+        birthday: "March 3",
+        debut: "2004",
+        gender: "Female",
+        species: "Rabbit",
+        picture: "images/hanausa.png"
+    },
+    {
+        name: "Strawberryusa",
+        nickname: "Strawberry",
+        birthday: "February 6th",
+        debut: "2004",
+        gender: "Female",
+        species: "Rabbit",
+        picture: "images/strawberryusa.png"
+    },
+    {
+        name: "Blueberryusa",
+        nickname: "Blueberry",
+        birthday: "February 6th",
+        debut: "2004",
+        gender: "Female",
+        species: "Rabbit",
+        picture: "images/blueberryusa.png"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
