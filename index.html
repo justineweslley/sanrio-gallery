@@ -86,9 +86,16 @@
             containerRow.innerHTML += `
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="card p-2 rounded-5 my-3" style="box-shadow: 0 8px 20px rgba(255, 182, 193, 0.3);">
-                  <div class="mx-auto rounded-circle" style="width:200px; height:200px; background-color:white; overflow:hidden; box-shadow: 0 0 15px 10px rgba(255, 105, 180, 0.4);">
-                      <img src="` + sanrio[i].picture + `" style="width:100%; height:100%; object-fit:cover;">
-                    </div>
+               <div class="mx-auto rounded-circle" style="
+    width: 80%;
+    max-width: 200px;
+    aspect-ratio: 1 / 1;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 0 15px 10px rgba(255, 105, 180, 0.4);">
+    <img src="` + sanrio[i].picture + `" style="width:100%; height:100%; object-fit:cover;">
+</div>
+
                     <div class="card-body">
                         <h5 class="card-title text-pink  my-3">` + sanrio[i].name + `</h5>
                         <p class="card-text"><strong>Nickname:</strong> ` + sanrio[i].nickname + `</p>
@@ -123,7 +130,7 @@
             });
         });
     </script>
-    
+
     <footer class="text-center py-3 text-pink">
         <p class="mb-0">&copy; 2025 Justine Weslley. All content is for educational purposes.</p>
         <small>Images sourced online</small>
