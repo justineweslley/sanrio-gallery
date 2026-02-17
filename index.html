@@ -7,138 +7,118 @@
     <title>Sanrio Gallery</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=DM+Sans&display=swap" rel="stylesheet">
 
     <style>
-        * {
-            transition: 100ms;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            background-color: #ffebf5;
+            background: #fff0f7;
+            font-family: 'DM Sans', sans-serif;
         }
 
         .card {
-            height: 500px;
+            border: 1.5px solid #ffd6e8;
+            border-radius: 20px;
+            transition: transform .2s, box-shadow .2s;
         }
 
-        .text-pink {
-            color: #FF69B4;
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(192, 90, 130, .2);
         }
 
-        #container-row .card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-
+        .card-title {
+            color: #c05a82;
+            font-family: 'Playfair Display', serif;
         }
 
-        #container-row .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.4);
-            z-index: 1;
+        .card-text {
+            font-size: .85rem;
+        }
+
+        .avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ffd6e8;
+        }
+
+        #searchBar {
+            border-radius: 100px;
+            border: 1.5px solid #ffd6e8;
+        }
+
+        #searchBar:focus {
+            box-shadow: 0 0 0 3px rgba(192, 90, 130, .15);
+            border-color: #c05a82;
         }
     </style>
-
 </head>
 
 <body>
 
     <section style="height:100vh; position:relative; overflow:hidden;">
         <img src="images/sanrio.jpg"
-            style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; z-index:0;">
-        <div
-            style="position:absolute; top:0; left:0; width:100%; height:100%; background-color:rgba(76, 40, 68, 0.4); z-index:1;">
-        </div>
-
-        <div class="container position-relative h-100" style="z-index:2;">
-            <div class="row h-100">
-                <div class="col d-flex flex-column justify-content-center align-items-center text-center">
-                    <h1
-                        style="font-weight:bold; font-size:3rem; text-shadow: 2px 2px 6px rgba(0,0,0,0.3); color:#ffe6f3;">
-                        Welcome to Sanrio Cafe
-                    </h1>
-                    <a href="#container-row" class="btn"
-                        style="border:2px solid #ffcfe7; color:#FF69B4; border-radius:25px; padding:10px 25px; font-weight:bold; margin-top:20px; box-shadow: 0 0 15px 10px rgba(255, 137, 196, 0.4); background-color: rgba(255, 255, 255, 0.7);">
-                        Get to know us!
-                    </a>
+            style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0;">
+        <div style="position:absolute; inset:0; background:rgba(76,40,68,.4);"></div>
+        <div class="container position-relative h-100">
+            <div class="row h-100 justify-content-center align-items-center text-center">
+                <div class="col">
+                    <h1 style="font-family:'Garamond',serif; color:#f9f1f5; font-size:3.5rem;  font-weight:bold;">Welcome to Sanrio
+                        Cafe</h1>
+                    <a href="#gallery" class="btn mt-3"
+                        style="background:#fff; color:#c05a82; border-radius:100px; padding:.6rem 2rem; font-weight:500;">Get
+                        to know us!</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="container my-4">
-        <div class="row my-4 mx-5">
-            <div class="col-12">
-                <input type="text" id="searchBar" class="form-control rounded-pill"
-                    placeholder="Search cafe staff by name or nickname...">
+    <div class="container py-5" id="gallery">
+        <div class="row justify-content-center mb-4">
+            <div class="col-12 col-md-6">
+                <input type="text" id="searchBar" class="form-control" placeholder="Search by name or nickname…">
             </div>
         </div>
-    </div>
-    
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <!-- <div class="display-6">Pictures</div> -->
-            </div>
-        </div>
-        <div class="row" id="container-row">
-        </div>
+        <div class="row g-4" id="container-row"></div>
     </div>
 
-    <script src="data.js">
+    <footer class="text-center py-3" style="color:#c05a82; font-size:.85rem; border-top:1px solid #ffd6e8;">
+        <p class="mb-0">&copy; 2025 Justine Weslley. Made with <span style="color:#e8658a;">♥</span></p>
+        <p class="mb-0">All content is for educational purposes.</p>
+        <small>Images sourced online</small>
+    </footer>
 
-    </script>
+    <script src="data.js"></script>
     <script>
-        var containerRow = document.getElementById("container-row");
+        var row = document.getElementById('container-row');
 
         for (var i = 0; i < sanrio.length; i++) {
-            containerRow.innerHTML += `
+            row.innerHTML += `
             <div class="col-6 col-md-4 col-lg-3">
-                <div class="card p-2 rounded-5 my-3" style="box-shadow: 0 8px 20px rgba(255, 182, 193, 0.3);">
-               <div class="mx-auto rounded-circle" style="width: 80%; max-width: 200px; aspect-ratio: 1 / 1; background-color: white; overflow: hidden; box-shadow: 0 0 15px 10px rgba(255, 105, 180, 0.4);">
-                        <img src="` + sanrio[i].picture + `" style="width:100%; height:100%; object-fit:cover;">
-                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title text-pink  my-3">` + sanrio[i].name + `</h5>
-                        <p class="card-text"><strong>Nickname:</strong> ` + sanrio[i].nickname + `</p>
-                        <p class="card-text"><strong>Birthday:</strong> ` + sanrio[i].birthday + `</p>
-                        <p class="card-text"><strong>Species:</strong> ` + sanrio[i].species + `</p>
-                        <p class="card-text"><strong>Gender:</strong> ` + sanrio[i].gender + `</p>
-                        <p class="card-text"><strong>Debut:</strong> ` + sanrio[i].debut + `</p>
-                    </div>  
+                <div class="card text-center p-3">
+                    <img src="${sanrio[i].picture}" class="avatar mx-auto mb-3">
+                    <div class="card-body p-0">
+                        <h5 class="card-title">${sanrio[i].name}</h5>
+                        <p class="card-text text-muted mb-2">${sanrio[i].nickname}</p>
+                        <p class="card-text"><strong>Birthday:</strong> ${sanrio[i].birthday}</p>
+                        <p class="card-text"><strong>Species:</strong> ${sanrio[i].species}</p>
+                        <p class="card-text"><strong>Gender:</strong> ${sanrio[i].gender}</p>
+                        <p class="card-text"><strong>Debut:</strong> ${sanrio[i].debut}</p>
+                    </div>
                 </div>
-            </div>
-        `;
+            </div>`;
         }
-    </script>
 
-
-    <script>
-        const searchBar = document.getElementById('searchBar');
-
-        searchBar.addEventListener('input', function () {
-            const searchTerm = searchBar.value.toLowerCase();
-            const cards = containerRow.getElementsByClassName('col-6');
-
-            Array.from(cards).forEach(card => {
-                const name = card.querySelector('.card-title').textContent.toLowerCase();
-                const nickname = card.querySelector('.card-text').textContent.toLowerCase();
-
-                if (name.includes(searchTerm) || nickname.includes(searchTerm)) {
-                    card.style.display = '';
-                } else {
-                    card.style.display = 'none';
-                }
+        document.getElementById('searchBar').addEventListener('input', function () {
+            const term = this.value.toLowerCase();
+            document.querySelectorAll('#container-row .col-6').forEach(col => {
+                const name = col.querySelector('.card-title').textContent.toLowerCase();
+                const nickname = col.querySelector('.card-text').textContent.toLowerCase();
+                col.style.display = name.includes(term) || nickname.includes(term) ? '' : 'none';
             });
         });
     </script>
-
-    <footer class="text-center py-3 text-pink">
-        <p class="mb-0">&copy; 2025 Justine Weslley. All content is for educational purposes.</p>
-        <small>Images sourced online</small>
-    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
